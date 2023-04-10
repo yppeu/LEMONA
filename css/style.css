@@ -1,0 +1,5 @@
+@charset "UTF-8";
+
+.swiper-slide>img {
+    max-width: 100%
+}
