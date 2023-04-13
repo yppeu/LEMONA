@@ -15,6 +15,11 @@
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 
+    <!-- 폰트어썸 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css"
+        integrity="sha512-SgaqKKxJDQ/tAUAAXzvxZz33rmn7leYDYfBP+YoMRSENhf3zJyx3SBASt/OfeQwBHA1nxMis7mM3EV/oYT6Fdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <!-- AOS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
@@ -26,36 +31,40 @@
 
 <body>
     <header>
-        <h1>
-            <a href="index.html">
-                <img src="./img/logo.gif" alt="">
-            </a>
-        </h1>
-        <nav>
-            <ul>
-                <li>
-                    <img src="" alt="">
-                    <a href="#">로그인</a>
-                </li>
-                <li>
-                    <img src="" alt="">
-                    <a href="#">회원가입</a>
-                </li>
-                <li>
-                    <img src="" alt="">
-                    <a href="#">장바구니</a>
-                </li>
-                <li>
-                    <img src="" alt="">
-                    <a href="#">고객센터</a>
-                </li>
-            </ul>
-        </nav>
+        <div class="container">
+            <div class="nav-left">
+                <h1>
+                    <a href="index.html">
+                        <img src="./img/logo.gif" alt="">
+                    </a>
+                </h1>
+                <div class="search-box">
+                    <input type="text">
+                    <img src="./img/icon-search.png" alt="">
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#">로그인</a>
+                    </li>
+                    <li>
+                        <a href="#">회원가입</a>
+                    </li>
+                    <li>
+                        <a href="#">장바구니</a>
+                    </li>
+                    <li>
+                        <a href="#">고객센터</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
         <section class="main-nav">
-            <ul>
+            <ul class="on">
                 <li>
                     <a href="#">전체 상품</a>
                 </li>
@@ -75,174 +84,232 @@
                     <a href="#">실시간 문의</a>
                 </li>
             </ul>
-            <div class="main-group swiper mySwiper">
+            <div class="banner-group swiper mySwiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <img src="./img/main01.jpg" alt="">
+                        <img src="./img/main02.jpg" alt="">
                     </div>
                     <div class="swiper-slide">
-                        <img src="./img/main02.jpg" alt="">
+                        <img src="./img/main01.jpg" alt="">
                     </div>
                 </div>
             </div>
         </section>
         <section class="item-group">
             <h6>Recommend Item</h6>
-            <div class="item-box">
-                <img src="./img/item01.jpg" alt="">
-                <p>[카카오프렌즈 x 레모나]</p>
-                <p>레모나 산<br>(2g*70포)</p>
-                <p>[패키지 랜덤발송/선물용 쇼핑백 증정]</p>
-                <p>19,800원</p>
+            <div class="container swiper mySwiper2">
+                <div class="item-boxs swiper-wrapper">
+                    <div class="item-box swiper-slide">
+                        <a href="#">
+                            <img src="./img/item01.jpg" alt="">
+                        </a>
+                        <p>[카카오프렌즈 x 레모나]</p>
+                        <p>레모나 산<br>(2g*70포)</p>
+                        <p>[패키지 랜덤발송/선물용 쇼핑백 증정]</p>
+                        <p>19,800원</p>
+                    </div>
+                    <div class="item-box swiper-slide">
+                        <a href="#">
+                            <img src="./img/item02.jpg" alt="">
+                        </a>
+                        <p>[레모나 핑크]</p>
+                        <p>피부비타민 레모나 핑크 히알루론산 정<br>
+                            (550mg x 60정)
+                        </p>
+                        <p>19,800원</p>
+                    </div>
+                    <div class="item-box swiper-slide">
+                        <a href="#">
+                            <img src="./img/item03.jpg" alt="">
+                        </a>
+                        <p>[카카오프렌즈 x 레모나]</p>
+                        <p>선물세트<br>
+                            카카오프렌즈 x 레모나
+                        </p>
+                        <p>(2g*50포 * 2개입)</p>
+                        <p>34,900원<span>40,000원</span></p>
+                    </div>
+                    <div class="item-box swiper-slide">
+                        <a href="#">
+                            <img src="./img/item04.gif" alt="">
+                        </a>
+                        <p>[카카오프렌즈 x 레모나]</p>
+                        <p>레모나 산<br>
+                            (2g*50포)</p>
+                        <p>[패키지 랜덤발송/선물용 쇼핑백 증정]</p>
+                        <p>18,900원</p>
+                    </div>
+                    <div class="item-box swiper-slide">
+                        <a href="#">
+                            <img src="./img/item05.jpg" alt="">
+                        </a>
+                        <p>[카카오프렌즈 x 레모나]</p>
+                        <p>레모나 산<br>
+                            (2g*500포)</p>
+                        <p>100,000원</p>
+                    </div>
+                    <div class="item-box swiper-slide">
+                        <a href="#">
+                            <img src="./img/item06.gif" alt="">
+                        </a>
+                        <p>[카카오프렌즈 x 레모나]</p>
+                        <p>레모나 산<br>
+                            (2g*150포)</p>
+                        <p>[패키지 랜덤발송/선물용 쇼핑백 증정]</p>
+                        <p>Sold Out</p>
+                    </div>
+                    <div class="item-box swiper-slide">
+                        <a href="#">
+                            <img src="./img/item07.gif" alt="">
+                        </a>
+                        <p>[카카오프렌즈 x 레모나]</p>
+                        <p>레모나 산<br>
+                            (2g*10포*10set)</p>
+                        <p>[패키지 랜덤발송]</p>
+                        <p>35,000원</p>
+                    </div>
+                </div>
             </div>
-            <div class="item-box">
-                <img src="./img/item02.jpg" alt="">
-                <p>피부비타민 레모나 핑크 히알루론산 정<br>
-                    (550mg x 60정)
-                </p>
-                <p>19,800원</p>
-            </div>
-            <div class="item-box">
-                <img src="./img/item03.jpg" alt="">
-                <p>선물세트<br>
-                    카카오프렌즈 x 레모나
-                </p>
-                <p>(2g*50포 * 2개입)</p>
-                <p>34,900원<span>40,000원</span></p>
-            </div>
-            <div class="item-box">
-                <img src="./img/item04.gif" alt="">
-                <p>[카카오프렌즈 x 레모나]</p>
-                <p>레모나 산<br>
-                    (2g*50포)</p>
-                <p>[패키지 랜덤발송/선물용 쇼핑백 증정]</p>
-                <p>18,900원</p>
-            </div>
-            <div class="item-box">
-                <img src="./img/item05.jpg" alt="">
-                <p>[카카오프렌즈 x 레모나]</p>
-                <p>레모나 산<br>
-                    (2g*500포)</p>
-                <p>100,000원</p>
-            </div>
-            <div class="item-box">
-                <img src="./img/item06.gif" alt="">
-                <p>[카카오프렌즈 x 레모나]</p>
-                <p>레모나 산<br>
-                    (2g*150포)</p>
-                <p>[패키지 랜덤발송/선물용 쇼핑백 증정]</p>
-                <p>Sold Out</p>
-            </div>
-            <div class="item-box">
-                <img src="./img/item07.gif" alt="">
-                <p>[카카오프렌즈 x 레모나]</p>
-                <p>레모나 산<br>
-                    (2g*10포*10set)</p>
-                <p>[패키지 랜덤발송]</p>
-                <p>35,000원</p>
-            </div>
+            <div class="swiper-pagination"></div>
         </section>
         <section class="best-group">
-            <h6>Best Seller</h6>
-            <div class="item-box">
-                <div class="back">
-                    <p>BEST<br>1</p>
+            <div class="container">
+                <h6>Best Seller</h6>
+                <div class="items-group">
+                    <div class="item-box">
+                        <a href="#">
+                            <img src="./img/img-best01.jpg" alt="">
+                        </a>
+                        <p>[레모나]</p>
+                        <p>레모나 S산(1.5g*200포)</p>
+                        <p>[쇼핑백증정/무료배송]</p>
+                        <p>35,000원</p>
+                    </div>
+                    <div class="item-box">
+                        <a href="#">
+                            <img src="./img/img-best02.jpg" alt="">
+                        </a>
+                        <p>[레모나]</p>
+                        <p>레모나 S산(2g*50포)</p>
+                        <p>32%</p>
+                        <p>
+                            16,900원
+                            <span>25,000원</span>
+                        </p>
+                    </div>
+                    <div class="item-box">
+                        <a href="#">
+                            <img src="./img/img-best03.jpg" alt="">
+                        </a>
+                        <p>[레모나]</p>
+                        <p>[어른 아이 함께 먹는 비타민!]</p>
+                        <p>레모나 톡톡(2g*10포*10개입)</p>
+                        <p>20,000원</p>
+                    </div>
+                    <div class="item-box">
+                        <a href="#">
+                            <img src="./img/img-best04.jpg" alt="">
+                        </a>
+                        <p>[레모나]</p>
+                        <p>결콜라겐 플러스 (2g*60포) 2개set</p>
+                        <p>[선물세트 특가!!][쇼핑백 증정]
+                        </p>
+                        <p><span>50%</span>
+                            29,900원
+                            <span>60,000원</span>
+                        </p>
+                    </div>
                 </div>
-                <img src="./img/item07.gif" alt="">
-                <p>레모나 S산<br>
-                    (1.5g*200포)</p>
-                <p>쇼핑백증정/무료배송</p>
-                <p>35,000원</p>
-            </div>
-            <div class="item-box">
-                <div class="back">
-                    <p>BEST<br>2</p>
-                </div>
-                <img src="./img/item07.gif" alt="">
-                <p>레모나 S산<br>
-                    (2g*50포)</p>
-                <p><span>32%</span>
-                    쇼핑백증정/무료배송
-                    <span>25,000원</span>
-                </p>
-            </div>
-            <div class="item-box">
-                <div class="back">
-                    <p>BEST<br>3</p>
-                </div>
-                <img src="./img/item07.gif" alt="">
-                <p>[레모나]</p>
-                <p>레모나 톡톡<br>
-                    (2g*10포*10개입)
-                </p>
-                <p>[어른 아이 함께 먹는 비타민!]</p>
-                <p>20,000원</p>
-            </div>
-            <div class="item-box">
-                <div class="back">
-                    <p>BEST<br>4</p>
-                </div>
-                <img src="./img/item07.gif" alt="">
-                <p>결콜라겐 플러스 (2g*60포) 2개set</p>
-                <p>[선물세트 특가!!]<br>
-                    [쇼핑백 증정]
-                </p>
-                <p><span>50%</span>
-                    29,900원
-                    <span>60,000원</span>
-                </p>
             </div>
         </section>
         <section class="sns-group">
             <p>LEMONA'S SNS</p>
             <div class="hashtag-box">
                 <p>#레모나</p>
-                <p>레모나신메뉴</p>
-                <p>레모나이벤트</p>
+                <p>#레모나신메뉴</p>
+                <p>#레모나이벤트</p>
             </div>
             <div class="sns-icon-box">
-                <img src="./img/icon-facebook.png" alt="">
-                <img src="./img/icon-insta.png" alt="">
+                <div class="img-box">
+                    <img src="./img/icon-facebook.png" alt="">
+                </div>
+                <div class="img-box">
+                    <img src="./img/icon-insta.png" alt="">
+                </div>
             </div>
         </section>
         <section class="qna-group">
-            <h3>자주 묻는 질문</h3>
-            <div class="qna-box">
-                <p>키즈생유산균 제품은 언제부터 섭취 가능한가요?</p>
-                <p>생후 6개월 이유식과 같은 식사가 가능해지는 시기에 섭취하실 것을 권해드립니다.
-                    분말섭취로 인한 불편함이 생기지 않도록 충분한 물과 함께 섭취하거나 유아의 경우 분유나, 우유, 이유식 등에 혼합하여 할 것의 권해 드립니다.</p>
-            </div>
-            <div class="qna-box">
-                <p>유산균을 우유에 타먹어도 될까요?</p>
-                <p>유아 및 어린이, 성인의 경우 유산균을 우유에 타서 드셔도 좋습니다.</p>
-            </div>
-            <div class="qna-box">
-                <p>제품은 어떻게 보관하는 것이 가장 좋은가요?</p>
-                <p>서늘하고 건조한 곳에서 보관하는 것이 좋습니다.직사광선 또는 습기가 많은 곳은 피하고, 특별한 지시사항이 없을 경우에는 냉장 보관할 필요는 없습니다.</p>
-            </div>
-            <div class="qna-box">
-                <p>칼로 시리즈를 임부, 수유부가 섭취해도 되나요?</p>
-                <p>임산, 수유부의 경우 다이어트 식품에 포함된 추출물 섭취를 지양하도록 식약처에서 권고하고 있습니다. 이에 해당 제품의 섭취를 피하시는게 좋습니다.</p>
-            </div>
-            <div class="qna-box">
-                <p>츄어블 제품을 씹지않고 삼켜도 되나요?</p>
-                <p>츄어블 제형 섭취 시, 씹지 않고 삼켰을 때 목에 걸릴 위험성이 있습니다. 씹거나 작은 조각으로 나누어 빨아먹는 방법을 권장 드리며, 삼키는 방법은 권장 드리지 않습니다.
-                    씹어서 섭취할 수 없는 연령이라면 분말 제형을 섭취하시는 것이 좋으며, 제형이 크게 느껴지신다면 작은 조각으로 부수어 사탕처럼 빨아 먹도록 해 주시는 방법을 권장해 드립니다..
-                </p>
+            <div class="container">
+                <h3>자주 묻는 질문</h3>
+                <div class="qna-items accordion">
+                    <div class="qna-box">
+                        <div class="q-box">
+                            <p>키즈생유산균 제품은 언제부터 섭취 가능한가요?</p>
+                            <a href="#" class="title">
+                                <img src="./img/icon-arr.png" alt=""></a>
+                        </div>
+                        <p class="content active">생후 6개월 이유식과 같은 식사가 가능해지는 시기에 섭취하실 것을 권해드립니다.<br>
+                            분말섭취로 인한 불편함이 생기지 않도록 충분한 물과 함께 섭취하거나 유아의 경우<br> 분유나, 우유, 이유식 등에 혼합하여 할 것의 권해 드립니다.</p>
+                    </div>
+                    <div class="qna-box">
+                        <div class="q-box">
+                            <p>유산균을 우유에 타먹어도 될까요?</p>
+                            <a href="#" class="title">
+                                <img src="./img/icon-arr.png" alt=""></a>
+                        </div>
+                        <p class="content">유아 및 어린이, 성인의 경우 유산균을 우유에 타서 드셔도 좋습니다.</p>
+                    </div>
+                    <div class="qna-box">
+                        <div class="q-box">
+                            <p>제품은 어떻게 보관하는 것이 가장 좋은가요?</p>
+                            <a href="#" class="title">
+                                <img src="./img/icon-arr.png" alt=""></a>
+                        </div>
+                        <p class="content">서늘하고 건조한 곳에서 보관하는 것이 좋습니다.<br>직사광선 또는 습기가 많은 곳은 피하고, 특별한 지시사항이 없을 경우에는 냉장 보관할
+                            필요는 없습니다.</p>
+                    </div>
+                    <div class="qna-box">
+                        <div class="q-box">
+                            <p>칼로 시리즈를 임부, 수유부가 섭취해도 되나요?</p>
+                            <a href="#" class="title">
+                                <img src="./img/icon-arr.png" alt=""></a>
+                        </div>
+                        <p class="content">임산, 수유부의 경우 다이어트 식품에 포함된 추출물 섭취를 지양하도록 식약처에서 권고하고 있습니다.<br>이에 해당 제품의 섭취를
+                            피하시는게 좋습니다.</p>
+                    </div>
+                    <div class="qna-box">
+                        <div class="q-box">
+                            <p>츄어블 제품을 씹지않고 삼켜도 되나요?</p>
+                            <a href="#" class="title">
+                                <img src="./img/icon-arr.png" alt=""></a>
+                        </div>
+                        <p class="content">츄어블 제형 섭취 시, 씹지 않고 삼켰을 때 목에 걸릴 위험성이 있습니다.<br> 씹거나 작은 조각으로 나누어 빨아먹는 방법을 권장
+                            드리며, 삼키는 방법은 권장 드리지
+                            않습니다.<br>
+                            씹어서 섭취할 수 없는 연령이라면 분말 제형을 섭취하시는 것이 좋으며, <br>제형이 크게 느껴지신다면 작은 조각으로 부수어 사탕처럼 빨아 먹도록 해 주시는 방법을
+                            권장해
+                            드립니다.
+                        </p>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <img src="./img/logo.gif" alt="">
-        <ul>
-            <li>경남제약헬스케어(주)</li>
-            <li>대표자 : 조헌정</li>
-            <li>서울특별시 강남구 언주로 702(논현동, 경남제약타워) 10층</li>
-            <li>사업자등록번호 : 113-86-45520</li>
-            <li>2020-서울강남-00833</li>
-        </ul>
-        <p>COPYRIGHTⓒ 2018 THEBORN KOREA INC. ALL RIGHTS RESERVED</p>
+        <div class="container">
+            <div class="img-box">
+                <img src="./img/logo.png" alt="">
+            </div>
+            <ul>
+                <li>경남제약헬스케어(주)</li>
+                <li>대표자 : 조헌정</li>
+                <li>서울특별시 강남구 언주로 702(논현동, 경남제약타워) 10층</li><br>
+                <li>사업자등록번호 : 113-86-45520</li>
+                <li>2020-서울강남-00833</li>
+            </ul>
+            <p>COPYRIGHTⓒ 2018 THEBORN KOREA INC. ALL RIGHTS RESERVED</p>
+        </div>
     </footer>
 </body>
 
