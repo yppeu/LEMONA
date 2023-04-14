@@ -31,10 +31,38 @@ var swiper2 = new Swiper(".mySwiper2", {
 });
 
 // AOS
-AOS.init();
+// AOS.init();
 
-// 아코디언
 $(document).ready(function () {
+  // nav
+  // let navBtn = document.getElementsByClassName("sub_gnb");
+  // console.log(navBtn);
+
+  // const arr = Array.from(navBtn);
+  // console.log(arr);
+
+  // function navBtnVal() {
+  //   $(this).toggleClass("visible");
+  // }
+
+  // arr.forEach((e) => {
+  //   // console.log(e);
+  //   $(e).on("mouseover", navBtnVal);
+
+  let navBtn = document.getElementsByClassName("sub_menu");
+  console.log(navBtn);
+
+  function navBtnVal() {
+    $(this).find("ul").toggleClass("visible");
+  }
+
+  for (let i = 0; i < navBtn.length; i++) {
+    console.log(navBtn[i]);
+    console.log(navBtn);
+    $(navBtn[i]).on("mouseover", navBtnVal);
+  }
+
+  // 아코디언
   //   $(".accordion .content").eq(0).show();
   $(".accordion .content").hide();
   $(".accordion .q-box").click(function (e) {

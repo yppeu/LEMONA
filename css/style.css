@@ -80,28 +80,52 @@ header .nav-left .search-box img {
 /*====================================================
 공통 main
 ======================================================*/
+
 main .main-nav {
     display: flex;
     flex-direction: column;
+    text-align: center;
 }
 
-main .main-nav ul:hover ::after {
-    content: '';
+main .main-nav .main-menu .sub_menu .sub_gnb .visible {}
+
+main .main-nav .main-menu .sub_menu .sub_gnb {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+}
+
+main .main-nav .main-menu .sub_menu .sub_gnb>li {
     width: 100%;
-    height: auto;
-    top: 0;
-    left: 0;
+    min-height: 28px;
+    line-height: 35px !important;
+    padding: 0 10px;
+    z-index: 500;
+}
+
+main .main-nav .main-menu .sub_menu .sub_gnb>ul>li:not(:last-child) {
+    margin-bottom: 6px;
+}
+
+main .main-nav .main-menu .sub_menu>a {
+    height: 50px;
+    line-height: 50px;
+}
+
+main .main-nav .main-menu .sub_menu>a:hover .sub_menu>a {
+    display: block;
     background: #ffe600;
 }
 
-main .main-nav ul {
+main .main-nav .main-menu {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     margin: 20px 0 20px;
 }
 
-main .main-nav ul li a {
+main .main-nav .main-menu li a {
     font-size: 14px;
     font-weight: 400;
     letter-spacing: -1px;
@@ -341,6 +365,11 @@ main .qna-items {
     display: flex;
     flex-direction: column;
     padding: 0 150px;
+}
+
+main .qna-items .qna-box {
+    width: 70%;
+    margin: auto;
 }
 
 main .qna-items .qna-box>p:first-of-type {
