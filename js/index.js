@@ -34,32 +34,20 @@ var swiper2 = new Swiper(".mySwiper2", {
 // AOS.init();
 
 $(document).ready(function () {
-  // nav
-  // let navBtn = document.getElementsByClassName("sub_gnb");
-  // console.log(navBtn);
-
-  // const arr = Array.from(navBtn);
-  // console.log(arr);
-
-  // function navBtnVal() {
-  //   $(this).toggleClass("visible");
-  // }
-
-  // arr.forEach((e) => {
-  //   // console.log(e);
-  //   $(e).on("mouseover", navBtnVal);
-
-  let navBtn = document.getElementsByClassName("sub_menu");
+  $(".sub_gnb").hide();
+  let navBtn = document.getElementsByClassName("on");
   console.log(navBtn);
 
   function navBtnVal() {
-    $(this).find("ul").toggleClass("visible");
+    console.log(1);
+    let navBtn = $(this).next("ul").slideToggle("visible");
+    // $(this).find("li").toggleClass("visible");
   }
 
   for (let i = 0; i < navBtn.length; i++) {
-    console.log(navBtn[i]);
-    console.log(navBtn);
+    // console.log(navBtn[i]);
     $(navBtn[i]).on("mouseover", navBtnVal);
+    $(navBtn[i]).on("mouseout", navBtnVal);
   }
 
   // 아코디언

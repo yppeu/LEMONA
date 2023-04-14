@@ -82,21 +82,53 @@ header .nav-left .search-box img {
 ======================================================*/
 
 main .main-nav {
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
     text-align: center;
 }
 
-main .main-nav .main-menu .sub_menu .sub_gnb .visible {}
-
-main .main-nav .main-menu .sub_menu .sub_gnb {
+main .main-nav ul.main-menu {
     display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 20px 0 20px;
+}
+
+main .main-nav ul.main-menu>li:hover ul.main-menu {
+    background: #ffe600;
+    display: block;
+}
+
+main .main-nav ul.main-menu>li {
+    text-align: center;
+    margin: auto;
+}
+
+main .main-nav ul.main-menu>li>a {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: -1px;
+    margin-bottom: 10px;
+    padding: 20px 0 0 0;
+}
+
+/* 2단메뉴 */
+main .main-nav ul.main-menu ul.sub_gnb {
+    display: flex;
+    position: absolute;
     flex-direction: column;
     align-items: center;
     display: none;
+    z-index: 500;
+    background: #ffe600;
 }
 
-main .main-nav .main-menu .sub_menu .sub_gnb>li {
+/* main .main-nav ul.main-menu ul.sub_gnb>li:hover {
+    background: #ffe600;
+} */
+
+main .main-nav ul.main-menu ul.sub_gnb>li {
     width: 100%;
     min-height: 28px;
     line-height: 35px !important;
@@ -104,31 +136,12 @@ main .main-nav .main-menu .sub_menu .sub_gnb>li {
     z-index: 500;
 }
 
-main .main-nav .main-menu .sub_menu .sub_gnb>ul>li:not(:last-child) {
-    margin-bottom: 6px;
-}
-
-main .main-nav .main-menu .sub_menu>a {
-    height: 50px;
-    line-height: 50px;
-}
-
-main .main-nav .main-menu .sub_menu>a:hover .sub_menu>a {
+main .main-nav ul.main-menu ul.sub_gnb>li>a {
     display: block;
-    background: #ffe600;
-}
-
-main .main-nav .main-menu {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    margin: 20px 0 20px;
-}
-
-main .main-nav .main-menu li a {
     font-size: 14px;
-    font-weight: 400;
-    letter-spacing: -1px;
+    padding: 0 20px;
+    height: 40px;
+    line-height: 40px;
 }
 
 main .main-nav .banner-group {
@@ -170,6 +183,7 @@ main .item-group .item-boxs .item-box>p {
 }
 
 main .item-group .item-boxs .item-box>p:first-of-type {
+    font-weight: 900;
     margin-bottom: 10px;
 }
 
