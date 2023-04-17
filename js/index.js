@@ -34,21 +34,82 @@ var swiper2 = new Swiper(".mySwiper2", {
 // AOS.init();
 
 $(document).ready(function () {
-  $(".sub_gnb").hide();
-  let navBtn = document.getElementsByClassName("on");
-  console.log(navBtn);
+  // gnb
+  var gnb = ".gnb";
+  var main = ".mainNav";
+  var sub = ".subNav";
+  var bg = ".subBg";
 
-  function navBtnVal() {
-    console.log(1);
-    let navBtn = $(this).next("ul").slideToggle("visible");
-    // $(this).find("li").toggleClass("visible");
-  }
+  $(gnb).hover(
+    function () {
+      $(sub + ", " + bg)
+        .stop()
+        .slideDown("fast");
+      $(main).removeClass("active");
+    },
+    function () {
+      $(sub + ", " + bg)
+        .stop()
+        .slideUp("fast");
+      $(main).removeClass("active");
+    }
+  );
 
-  for (let i = 0; i < navBtn.length; i++) {
-    // console.log(navBtn[i]);
-    $(navBtn[i]).on("mouseover", navBtnVal);
-    $(navBtn[i]).on("mouseout", navBtnVal);
-  }
+  $(main)
+    .first()
+    .focus(function () {
+      $(gnb).trigger("mouseenter");
+      $(this).addClass("active");
+    });
+
+  $(main).focus(function () {
+    $(main).removeClass("active");
+    $(this).addClass("active");
+  });
+
+  $(main)
+    .first()
+    .keydown(function (e) {
+      if (e.keyCode == 9) {
+        if (e.shithKey) {
+          $(gnb).trigger("mouseleave");
+          $(this).removeClass("active");
+        }
+      }
+    });
+
+  $(sub)
+    .last()
+    .find("li:last a")
+    .keydown(function (e) {
+      if (e.keyCode == 9) {
+        if (!e.shiftKey) {
+          $(gnb).trigger("mouseleave");
+          $(this).removeClass("active");
+        }
+      }
+    });
+  $(sub)
+    .find("li:last a")
+    .focus(function () {
+      $(main).removeClass("active");
+      $(this).parents(sub).prev().addClass("active");
+    });
+
+  // $(".sub_gnb").hide();
+  // let navBtn = document.getElementsByClassName("on");
+  // console.log(navBtn);
+
+  // function navBtnVal() {
+  //   console.log(1);
+  //   $(this).next("ul").slideToggle("visible");
+  // }
+
+  // for (let i = 0; i < navBtn.length; i++) {
+  //   // console.log(navBtn[i]);
+  //   $(navBtn[i]).on("mouseover", navBtnVal);
+  //   $(navBtn[i]).on("mouseout", navBtnVal);
+  // }
 
   // 아코디언
   //   $(".accordion .content").eq(0).show();
