@@ -41,19 +41,29 @@ var swiper = new Swiper(".mySwiper3", {
 
 // 햄버거 메뉴
 const button = () => {
-  const burger = document.querySelector(".burger"); // burger class 가져오기
+  const burger = document.querySelector(".burger");
+  const burger2 = document.querySelector(".burger-menu");
+  const text = document.querySelector(".menu_wrap");
+  const bg = document.querySelector(".bg");
+
   burger.addEventListener("click", () => {
     // 클릭이벤트
     burger.classList.toggle("toggle"); //toggle class가 있으면 제거, 없으면 추가
+    console.log(burger2.style.display);
+    console.log(bg);
+    if (burger2.style.display == "block") {
+      burger2.style.display = "none";
+      text.style.color = "white";
+      bg.style.backgroundColor = "black";
+    } else {
+      burger2.style.display = "block";
+    }
   });
 };
 button();
 
-// AOS
-// AOS.init();
-
 $(document).ready(function () {
-  // gnb
+  // gnb 메뉴
   var gnb = ".gnb";
   var main = ".mainNav";
   var sub = ".subNav";
