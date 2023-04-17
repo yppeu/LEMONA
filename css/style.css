@@ -17,6 +17,22 @@ main .main-nav .m-banner-group {
 
 
 /* 햄버거 메뉴 */
+header .fullscreen_menu .burger {
+    display: none;
+}
+
+header .fullscreen_menu .burger div {
+    position: relative;
+    background: #000;
+    width: 45px;
+    height: 5px;
+    margin: 5px;
+    transition: all 0.5s;
+    border-radius: 3px;
+    margin-left: auto;
+    z-index: 3000;
+}
+
 header .toggle .line1 {
     transform: rotate(-45deg) translate(-8px, 6px);
 }
@@ -29,17 +45,6 @@ header .toggle .line3 {
     transform: rotate(45deg) translate(-8px, -6px);
 }
 
-header .burger div {
-    position: relative;
-    background: #000;
-    width: 45px;
-    height: 5px;
-    margin: 5px;
-    transition: all 0.5s;
-    border-radius: 3px;
-    margin-left: auto;
-    z-index: 3000;
-}
 
 header .burger-menu {
     display: none;
@@ -641,10 +646,9 @@ footer p {
 
 @media all and (max-width:678px) {
 
-    .burger div {
+    header .fullscreen_menu .burger {
         display: block;
     }
-
 
     header .nav-left>h1>a>img {
         max-width: 75%;
