@@ -3,21 +3,8 @@ var swiper = new Swiper(".mySwiper", {
   autoplay: {
     delay: 3000,
   },
-  breakpoints: {
-    // 화면의 넓이가 320px 이상일 때
-    300: {
-      spaceBetween: 20,
-    },
-    // 화면의 넓이가 640px 이상일 때
-    670: {
-      spaceBetween: 40,
-    },
-    900: {
-      spaceBetween: 40,
-    },
-  },
 });
-// 스와이퍼2
+// 스와이퍼 2
 var swiper2 = new Swiper(".mySwiper2", {
   autoplay: {
     delay: 4000,
@@ -28,7 +15,39 @@ var swiper2 = new Swiper(".mySwiper2", {
     el: ".swiper-pagination",
     clickable: true,
   },
+  breakpoints: {
+    // 화면의 넓이가 300px 이상일 때
+    300: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+    // 화면의 넓이가 600px 이상일 때
+    600: {
+      slidesPerView: 2,
+      spaceBetween: 40,
+    },
+    1000: {
+      slidesPerView: 4,
+      spaceBetween: 40,
+    },
+  },
 });
+// 스와이퍼 3 (모바일용)
+var swiper = new Swiper(".mySwiper3", {
+  autoplay: {
+    delay: 3000,
+  },
+});
+
+// 햄버거 메뉴
+const button = () => {
+  const burger = document.querySelector(".burger"); // burger class 가져오기
+  burger.addEventListener("click", () => {
+    // 클릭이벤트
+    burger.classList.toggle("toggle"); //toggle class가 있으면 제거, 없으면 추가
+  });
+};
+button();
 
 // AOS
 // AOS.init();
