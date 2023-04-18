@@ -137,8 +137,23 @@ $(document).ready(function () {
   //   $(navBtn[i]).on("mouseout", navBtnVal);
   // }
 
-  // 아코디언
-  //   $(".accordion .content").eq(0).show();
+  // gnb 아코디언
+  $(".burger-menu .menu_wrap .subgnb").hide();
+  $(".gnbNav").click(function (e) {
+    e.preventDefault();
+    console.log(1);
+    if ($(this).next().is(":visible")) {
+      $(this).next().stop().slideUp(250);
+      $(this).removeClass("active");
+    } else {
+      $(this).siblings(".gnbNav .subgnb").stop().slideUp();
+      $(this).siblings(".gnbNav").removeClass("active");
+      $(this).next().stop().slideDown(250);
+      $(this).addClass("active");
+    }
+  });
+
+  // q&a 아코디언
   $(".accordion .content").hide();
   $(".accordion .q-box").click(function (e) {
     e.preventDefault();
