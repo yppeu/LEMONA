@@ -82,12 +82,32 @@ header .burger-menu .menu_wrap li {
     text-align: left;
 }
 
+header .burger-menu .menu_wrap li .gnbNav {
+    font-size: 18px;
+}
+
+header .burger-menu .menu_wrap li .gnbNav .subgnb li>a {
+    font-size: 12x;
+}
+
+header .burger-menu .menu_wrap li .gnbNav::after {
+    content: '▼';
+    position: absolute;
+    margin-left: 10px;
+    font-size: 12px;
+    padding-top: 5px;
+}
+
 header .burger-menu .menu_wrap a {
     display: block;
-    font-size: 14px;
-    font-weight: 600;
+    /* font-size: 20px; */
+    font-weight: 400;
     letter-spacing: -1px;
     color: #000;
+}
+
+header .burger-menu .menu_wrap a:not(:last-child) {
+    margin-bottom: 10px;
 }
 
 
@@ -723,4 +743,5 @@ footer p {
     main .qna-items .qna-box .q-box {
         align-items: flex-start;
     }
+
 }
