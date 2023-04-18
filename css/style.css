@@ -30,7 +30,7 @@ header .fullscreen_menu .burger div {
     transition: all 0.5s;
     border-radius: 3px;
     margin-left: auto;
-    z-index: 3000;
+    z-index: 5000;
 }
 
 header .toggle .line1 {
@@ -49,41 +49,43 @@ header .toggle .line3 {
 header .burger-menu {
     display: none;
     position: absolute;
-    top: 65%;
+    top: 36%;
     right: 20%;
-    transform: translate(-20%, -65%);
+    transform: translate(-20%, -36%);
     margin: -82px 0 0 -35px;
     z-index: 2000;
 }
 
-header .fullscreen_menu .burger-menu .bg {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    z-index: 1000;
+header .burger-menu .menu_wrap {
+    position: relative;
+    top: 0;
+    right: 0;
+    z-index: 3000;
+    padding-top: 20px;
 }
 
-header .burger-menu .menu_wrap {
+header .burger-menu .menu_wrap::before {
+    content: '';
     position: absolute;
-    top: 50px;
-    right: 50px;
+    top: 0;
+    left: -20px;
+    width: 100vw;
+    height: 100vh;
+    background: #ffe600;
+    z-index: -2000;
 }
 
 header .burger-menu .menu_wrap li {
     padding: 10px;
-    text-align: right;
+    text-align: left;
 }
 
 header .burger-menu .menu_wrap a {
     display: block;
-    font-size: 26px;
+    font-size: 14px;
     font-weight: 600;
     letter-spacing: -1px;
-    color: #fff;
+    color: #000;
 }
 
 
