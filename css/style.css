@@ -49,17 +49,19 @@ header .toggle .line3 {
 header .burger-menu {
     display: none;
     position: absolute;
+    width: 100%;
     top: 0;
-    right: 20%;
-    transform: translate(-20%, -36%);
+    right: 0;
+    transform: translate(-20%, 0%);
     margin: -82px 0 0 -35px;
     z-index: 2000;
 }
 
 header .burger-menu .menu_wrap {
     position: relative;
-    top: 240px;
-    right: 0;
+    display: inline-block;
+    top: 185px;
+    left: 269px;
     z-index: 3000;
     padding-top: 20px;
 }
@@ -68,7 +70,7 @@ header .burger-menu .menu_wrap::before {
     content: '';
     position: absolute;
     top: 0;
-    left: -20px;
+    left: -194px;
     width: 100vw;
     height: 90vh;
     background: #ffe600;
