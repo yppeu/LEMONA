@@ -644,14 +644,13 @@ footer p {
 
 @media all and (max-width:768px) {
 
+    header nav {
+        display: none;
+    }
+
     header .nav-left {
         width: 100%;
         justify-content: space-between;
-    }
-
-    header nav,
-    main .gnb>ul {
-        display: none;
     }
 
     main .gnb .subNav {
@@ -674,12 +673,24 @@ footer p {
         display: block;
     }
 
+    main .main-gnb {
+        display: none;
+    }
+
     header .nav-left>h1>a>img {
         max-width: 75%;
     }
 
+    main .gnb li .mainNav {
+        font-size: 14px;
+    }
+
     main .qna-items {
         padding: 0 30px;
+    }
+
+    main .gnb .subNav a {
+        font-size: 13px;
     }
 
     item-group {
@@ -718,8 +729,13 @@ footer p {
 }
 
 @media all and (max-width:400px) {
+
     header {
         background: #ffe600;
+    }
+
+    main .gnb>ul {
+        display: none;
     }
 
     main .main-gnb {
