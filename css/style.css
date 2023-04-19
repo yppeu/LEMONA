@@ -60,19 +60,20 @@ header .burger-menu {
 header .burger-menu .menu_wrap {
     position: relative;
     display: inline-block;
-    top: 185px;
+    top: 0;
     left: 269px;
     z-index: 3000;
-    padding-top: 50px;
+    padding-top: 215px;
+    padding-left: 30px;
 }
 
 header .burger-menu .menu_wrap::before {
     content: '';
     position: absolute;
     top: 0;
-    left: -81px;
-    width: 70vw;
-    height: 85vh;
+    left: 0;
+    width: 100vw;
+    height: 110vh;
     background: #ffe600;
     z-index: -2000;
 }
@@ -80,6 +81,10 @@ header .burger-menu .menu_wrap::before {
 header .burger-menu .menu_wrap li {
     padding: 10px;
     text-align: left;
+}
+
+header .burger-menu .menu_wrap .gnbNav {
+    font-weight: 600;
 }
 
 header .burger-menu .menu_wrap li .gnbNav {
@@ -642,7 +647,11 @@ footer p {
     }
 }
 
-@media all and (max-width:768px) {
+@media all and (max-width:778px) {
+
+    header .fullscreen_menu .burger {
+        display: block;
+    }
 
     header nav {
         display: none;
@@ -651,6 +660,10 @@ footer p {
     header .nav-left {
         width: 100%;
         justify-content: space-between;
+    }
+
+    main .main-gnb {
+        display: none;
     }
 
     main .gnb .subNav {
@@ -668,14 +681,6 @@ footer p {
 }
 
 @media all and (max-width:678px) {
-
-    header .fullscreen_menu .burger {
-        display: block;
-    }
-
-    main .main-gnb {
-        display: none;
-    }
 
     header .nav-left>h1>a>img {
         max-width: 75%;
