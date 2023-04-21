@@ -52,7 +52,7 @@ header .toggle .line3 {
 }
 
 header .burger-menu {
-    /* display: none; */
+    display: none;
     position: fixed;
     width: 100%;
     top: 0;
@@ -132,6 +132,10 @@ header nav ul li a {
 
 header nav ul li a:hover {
     font-weight: 600
+}
+
+header .nav-left>h1 {
+    z-index: 9999;
 }
 
 header .nav-left,
