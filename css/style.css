@@ -5,7 +5,7 @@ main .main-nav .m-banner-group {
 }
 
 .swiper-slide img {
-    max-width: 100%
+    width: 100%
 }
 
 .swiper-pagination {
@@ -17,8 +17,14 @@ main .main-nav .m-banner-group {
 
 
 /* 햄버거 메뉴 */
+
+header .fullscreen_menu {
+    /* position: fixed; */
+    z-index: 1000;
+}
+
 header .fullscreen_menu .burger {
-    display: none;
+    /* display: none; */
 }
 
 header .fullscreen_menu .burger div {
@@ -45,37 +51,25 @@ header .toggle .line3 {
     transform: rotate(45deg) translate(-8px, -6px);
 }
 
-
 header .burger-menu {
-    display: none;
-    position: absolute;
+    /* display: none; */
+    position: fixed;
     width: 100%;
     top: 0;
-    right: 0;
-    transform: translate(-20%, 0%);
-    margin: -82px 0 0 -35px;
+    left: 0;
+    /* margin: -82px 0 0 -35px; */
     z-index: 2000;
 }
 
 header .burger-menu .menu_wrap {
     position: relative;
-    display: inline-block;
     top: 0;
-    left: 269px;
-    z-index: 3000;
-    padding-top: 215px;
-    padding-left: 30px;
-}
-
-header .burger-menu .menu_wrap::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 135%;
-    height: 110vh;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    color: #000;
     background: #ffe600;
-    z-index: -2000;
+    padding: 150px 50px;
 }
 
 header .burger-menu .menu_wrap li {
