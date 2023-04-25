@@ -65,8 +65,8 @@ header .burger-menu {
 header .burger-menu .menu_wrap {
     position: absolute;
     top: -33px;
-    left: 0;
-    width: 100vw;
+    left: 13px;
+    width: 96vw;
     height: 120vh;
     color: #000;
     background: #ffe600;
